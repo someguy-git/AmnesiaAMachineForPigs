@@ -33,6 +33,13 @@
 #include "SDL_video.h"
 #include "SDL_version.h"
 
+/* Must be included before begin_code.h pushes a non-default pack value,
+   otherwise modern Windows SDK headers reject the packing state. */
+#if defined(SDL_VIDEO_DRIVER_WINDOWS)
+#define WIN32_LEAN_AND_MEAN
+#include <windows.h>
+#endif
+
 #include "begin_code.h"
 /* Set up for C function definitions, even when using C++ */
 #ifdef __cplusplus

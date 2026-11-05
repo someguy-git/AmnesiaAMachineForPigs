@@ -130,7 +130,6 @@ file(GLOB impl_sources RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
     sources/impl/MeshLoaderColladaHelpers.cpp
     sources/impl/MeshLoaderColladaLoader.cpp
     sources/impl/MeshLoaderMSH.cpp
-    sources/impl/MeshLoaderFBX.cpp
 )
 
 IF(APPLE)
@@ -205,8 +204,6 @@ set_target_properties(Newton PROPERTIES IMPORTED_LOCATION ${DEP_LIB_DIR}/libNewt
 add_library(angelscript STATIC IMPORTED)
 set_target_properties(angelscript PROPERTIES IMPORTED_LOCATION ${DEP_LIB_DIR}/libangelscript.a)
 
-add_library(FBX STATIC IMPORTED)
-set_target_properties(FBX PROPERTIES IMPORTED_LOCATION ${DEP_LIB_DIR}/libfbxsdk-2012.2-static.a)
 
 # setup HPL2 compile target
 
@@ -225,7 +222,6 @@ if (LINUX)
         IL
         z
         pthread dl
-        FBX
     )
 ELSEIF(APPLE)
     FIND_LIBRARY(OPENGL_LIBRARY OpenGL)
@@ -239,7 +235,7 @@ ELSEIF(APPLE)
         Newton
         angelscript
         IL
-        FBX iconv ${SC_LIBRARY}
+        iconv ${SC_LIBRARY}
         ${THEORA_LIBRARY}
         ${OPENGL_LIBRARY}
         ${COCOA_LIBRARY}

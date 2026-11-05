@@ -14,7 +14,7 @@
 #pragma comment(lib, "libvorbisfile.lib")
 #pragma comment(lib, "alut.lib")
 #pragma comment(lib, "openal32.lib")
-#pragma comment(lib, "SDL.lib")
+//#pragma comment(lib, "SDL.lib")
 #endif
 
 #include "OAL_Types.h"

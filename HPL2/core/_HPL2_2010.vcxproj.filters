@@ -1015,9 +1015,6 @@
     <ClInclude Include="include\impl\GamepadXInput.h">
       <Filter>Impl\Input</Filter>
     </ClInclude>
-    <ClInclude Include="include\impl\MeshLoaderFBX.h">
-      <Filter>Resources</Filter>
-    </ClInclude>
     <ClInclude Include="include\graphics\PostEffect_ColorGrading.h">
       <Filter>Graphics\PostEffectTypes</Filter>
     </ClInclude>
@@ -1853,9 +1850,6 @@
     </ClCompile>
     <ClCompile Include="sources\impl\GamepadXInput.cpp">
       <Filter>Impl\Input</Filter>
-    </ClCompile>
-    <ClCompile Include="sources\impl\MeshLoaderFBX.cpp">
-      <Filter>Resources</Filter>
     </ClCompile>
     <ClCompile Include="sources\graphics\PostEffect_ColorGrading.cpp">
       <Filter>Graphics\PostEffectTypes</Filter>
